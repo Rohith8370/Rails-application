@@ -1,0 +1,11 @@
+apiVersion: tekton.dev/v1
+kind: PipelineResource
+metadata:
+  name: git-source
+spec:
+  type: git
+  params:
+    - name: url
+      value: https://github.com/Rohith8370/Rails-application.git
+    - name: revision
+      value: main

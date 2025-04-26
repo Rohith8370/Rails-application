@@ -1,0 +1,20 @@
+apiVersion: tekton.dev/v1
+kind: PipelineRun
+metadata:
+  name: rails-kaniko-run
+spec:
+  pipelineRef:
+    name: rails-kaniko-pipeline
+  params:
+    - name: IMAGE
+      value: docker.io/rohithkrishna04/rails-app:1.0
+  workspaces:
+    - name: shared-workspace
+      volumeClaimTemplate:
+        metadata:
+          name: rails-workspace-pvc
+        spec:
+          accessModes: [ "ReadWriteOnce" ]
+          resources:
+            requests:
+              storage: 1Gi
