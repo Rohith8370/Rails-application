@@ -1,7 +1,5 @@
 # Rails-application
 
-# DevOps Coding Assessment - Makerble
-
 ## Project Overview
 
 This project demonstrates the complete DevOps lifecycle for a simple **Ruby on Rails** application using **Docker**, **Kubernetes**, **ArgoCD (GitOps)**, and **Tekton (CI/CD pipelines)**.
